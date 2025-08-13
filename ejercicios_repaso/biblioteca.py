@@ -43,3 +43,8 @@ class Usuario:
             libro.devolver()
             self.libros_prestados.remove(libro)
         else: print(f"hubo un problema con la solicitud")
+
+    def mostrar_libros(self):
+        print(f"libros prestados a {self.nombre}")
+        for libro in self.libros_prestados:
+            libro.mostrar_info()
