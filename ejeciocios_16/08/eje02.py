@@ -5,21 +5,26 @@
 sueldo_hora_normal=6000
 hora_extra=9000
 
-horas_trabajadas=int(input("Ingrese la cantidad de horas trabajadas: "))
-if horas_trabajadas>40:
-    horas_extras=horas_trabajadas-40
-    sueldo_normal=40*sueldo_hora_normal
-    sueldo_extra=horas_extras*hora_extra
-    sueldo_total=sueldo_normal+sueldo_extra
-else:
-    sueldo_total=horas_trabajadas*sueldo_hora_normal
-if sueldo_total>400000:
-    descuento=sueldo_total*0.02
-    sueldo_final=sueldo_total-descuento
-else:
-    descuento=3000
-    sueldo_final=sueldo_total-descuento
-print("El sueldo total es de:",sueldo_final)
+while True:
+    try:
+        horas_trabajadas=int(input("Ingrese la cantidad de horas trabajadas: "))
+        if horas_trabajadas>40:
+            horas_extras=horas_trabajadas-40
+            sueldo_normal=40*sueldo_hora_normal
+            sueldo_extra=horas_extras*hora_extra
+            sueldo_total=sueldo_normal+sueldo_extra
+        else:
+            sueldo_total=horas_trabajadas*sueldo_hora_normal
+        if sueldo_total>400000:
+            descuento=sueldo_total*0.02
+            sueldo_final=sueldo_total-descuento
+        else:
+            descuento=3000
+            sueldo_final=sueldo_total-descuento
+        print("El sueldo total es de:",sueldo_final)
+        break
+    except ValueError:
+        print("Por favor, ingrese un número entero válido para la cantidad de horas trabajadas.")
 
 print("\n--- Desglose del sueldo ---")
 print(f"Horas trabajadas: {horas_trabajadas}")
