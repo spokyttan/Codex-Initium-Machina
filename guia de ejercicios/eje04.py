@@ -1,4 +1,3 @@
-dicc_notas = {}
 primera_nota = 0.55
 segunda_nota = 0.3
 tercera_nota = 0.15

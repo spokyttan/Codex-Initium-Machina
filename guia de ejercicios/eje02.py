@@ -15,6 +15,7 @@ try:
                 print(f"La comision de venta fue: {comision_venta}")
                 comision_total = 0
                 comision_total = comision_total + comision_venta
+                print(comision_total)
                 i += 1
         sueldo_final = sueldo_base + comision_total
         print("---------------------------------")
