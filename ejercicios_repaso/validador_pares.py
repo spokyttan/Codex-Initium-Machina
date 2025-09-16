@@ -1,18 +1,23 @@
 #mostrar lista de numeros hasta el numero del usuario, cada numero debe mostrarse a si mismo 
 #y si es par o impar
 
+def es_Par(numero):
+        if numero % 2 == 0:
+            return True
+        else:
+            return False
+
+
 while True:
     try:
-        n=int(input("Ingrese un número entero: "))
+        n = int(input("Ingrese un número: "))
         for i in range(1,n+1):
-            if i % 2 ==0:
-                validador= "par"
+            if es_Par(i):
+                 print(F"{i} -> Es par")
             else:
-                validador="impar"
-            print(f"{i} -> {validador}")
+                 print(f"{i} -> Es impar")
     except ValueError:
-        print("El número ingresado no es valido")
-
+        print("Número invalido")
 
 
 """ANDRE:
